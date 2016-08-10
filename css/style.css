@@ -55,3 +55,7 @@ h1, h2 {
   top: 639px;
   left: 75px;
 }
+
+div.catalog-price {
+  background-image: url("../img/catalog-background.jpg");
+}
