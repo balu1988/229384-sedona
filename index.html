@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -16,7 +17,7 @@
             <li><a href="#">Фото и видео</a></li>
             <div class="logo"><a href="#"><img src="img/logo.png" width="138" height="70" alt="Логотип"></a></div>
             <li><a href="#">Карта штата</a></li>
-            <li><a href="#">Гостиницы</a></li>
+            <li><a href="catalog.html">Гостиницы</a></li>
           </ul>
         </nav>
         <div class="index-welcome-screen">
@@ -27,9 +28,9 @@
       </header>
 
 
-        <article class="reasons">
+        <article class="reasons-block">
 
-          <header class="reasons-title">
+          <header class="reasons-title-main">
               <h1>Седона - небольшой городок в аризоне, заслуживающий большего!</h1>
               <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
           </header>
@@ -38,7 +39,7 @@
             <div class="reason">
               <h2 class="reason-title">Настоящий городок</h2>
               <span class="reason-number">№1</span>
-              <p>Седона - не аттракцион для туристов. Там течет жизнь</p>
+              <p>Седона - не аттракцион для туристов, там течет жизнь</p>
             </div>
             <div class="reason-picture">
               <img src="img/reason1.jpg" width="800" height="256" alt="foto1">
@@ -99,36 +100,50 @@
         <div class="index-find">
           <h2>Заинтересовались?</h2>
           <p>Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <button class="btn" href="#">Поиск гостиницы в Седоне</button>
+          <button class="btn btn-find" href="#">Поиск гостиницы в Седоне</button>
         </div>
 
 
-        <div class="map">
-          <div class="map-container">
+        <div class="map-container">
             <!--выводится интерактивная карта, пока картинка-->
-            <img src="img/map.jpg" width="1200" height="593">
-          <div class="form">
-            <form>
-              <!--???????-->
+
+          <div class="index-form">
+            <form action="#" method="post">
+              <div>
+                <label for="arrive">Дата заезда:</label>
+                <input id="arrive" type="text" placeholder="24 апреля 2014">
+              </div>
+              <div>
+                <label for="leave">Дата выезда:</label>
+                <input id="leave" type="text" placeholder="4 июля 2014">
+              </div>
+              <div>
+                <label for="adult">Взрослые:</label>
+                <input id="adult" type="text" placeholder="2">
+              </div>
+              <div>
+                <label for="child">Дети:</label>
+                <input id="child" type="text" placeholder="0">
+              </div>
+
+              <input class="btn btn-submit" type="submit" value="Найти">
             </form>
           </div>
 
-          <footer class="footer">
-            <div class="footer-contacts">
+          <footer class="footer footer-index">
+            <div class="footer-col footer-contacts">
               #VISITSEDONA
             </div>
-            <div class="footer-social">
+            <div class="footer-col footer-social">
               <a class="social-btn social-btn-tw" href="#">Twitter</a>
               <a class="social-btn social-btn-fb" href="#">Facebook</a>
               <a class="social-btn social-btn-yt" href="#">Youtube</a>
             </div>
-            <div class="footer-copyright">
+            <div class="footer-col footer-copyright">
               <p>Website by</p>
-              <a class="btn" href="https://htmlacademy.ru"><img src="img/academy-logo.png" width="113" height="39" alt="html academy logo"></a>
+              <a class="copyright-link" href="https://htmlacademy.ru"><img src="img/academy-logo.png" width="113" height="39" alt="html academy logo"></a>
             </div>
           </footer>
-
-          </div>
         </div>
 
 

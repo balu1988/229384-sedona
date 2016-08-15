@@ -3,29 +3,43 @@ body {
   font-size: 14px;
   font-weight: normal;
   line-height: 21px;
-  color: #000;
+  color: #000000;
   text-transform: uppercase;
   background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .wrapper {
   width: 1200px;
   margin: 0 auto;
-  background-color: #fff;
-  box-shadow: 0 0 30px -5px #000;
+  background-color: #ffffff;
+  box-shadow: 0 0 30px -5px #000000;
 }
 
 a {
   text-decoration: none;
 }
 
-ul {
-  list-style: none;
+.to-left {
+  float: left;
 }
+
+.to-right {
+  float: right;
+}
+
+/* Index */
 
 .main-header a {
   font-weight: bold;
-  color: #000;
+  color: #000000;
 }
 
 h1, h2 {
@@ -37,25 +51,223 @@ h1, h2 {
   font-size: 30px;
 }
 
-.background-photo {
-  position: relative;
-  z-index: 0;
-}
-
 .background-welcome {
   position: absolute;
-  z-index: 50;
-  top: 250px;
-  left: 440px;
+  z-index: 1;
+  top: 19%;
+  right: 33.3%;
 }
 
 .background-mask {
   position: absolute;
-  z-index: 50;
-  top: 639px;
-  left: 75px;
+  z-index: 1;
+  top: 78%;
+  left: 5.55%;
 }
 
-div.catalog-price {
-  background-image: url("../img/catalog-background.jpg");
+.map-container {
+  background: url("../img/map.jpg") no-repeat;
+  overflow: hidden;
+}
+
+.main-navigation li {
+  display: inline-block;
+  vertical-align: top;
+  padding: 15px 0;
+  outline: 1px solid red;
+  width: 20%;
+}
+
+.logo {
+  position: absolute;
+  z-index: 1;
+  right: 45%;
+  top: 0;
+}
+
+.main-navigation a {
+  display: block;
+  text-decoration: none;
+  color: #000000;
+  font-size: 14px;
+  text-align: center;
+}
+
+.main-navigation li:nth-child(2) {
+  margin-right: 20%;
+}
+
+.main-navigation li:nth-child(4n) {
+  margin-right: 0;
+}
+
+.main-navigation ul {
+  list-style: none;
+  padding: 0;
+  font-size: 0;
+}
+
+.reasons-title-main {
+  text-align: center;
+  margin: 50px auto;
+  width: 45%;
+}
+
+.reasons-block {
+  font-size: 0;
+}
+.reasons-row {
+  width: 100%;
+  min-height: 255px;
+  outline: 1px solid blue;
+
+}
+
+.reason {
+  box-sizing: border-box;
+  width: 33.33%;
+  outline: 1px solid green;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  padding: 40px 48px;
+  text-align: center;
+}
+
+.reason-picture {
+  width: 66.66%;
+  outline: 1px solid red;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+}
+
+.index-find {
+  width: 44%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn {
+  color: #ffffff;
+  font-size: 21px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+}
+
+.btn-find {
+  padding: 30px 60px;
+  background: #766357;
+  width: 100%;
+}
+
+.map-container {
+  min-height: 400px;
+}
+
+.index-form {
+  width: 44%;
+  min-height: 14%;
+  background: #ffffff;
+  margin: 0 auto;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.btn-submit {
+  background: #81b3d2;
+  width: 80%;
+  padding: 20px 60px;
+}
+
+.footer {
+  width: 100%;
+  min-height: 4%;
+  background: #ffffff;
+  opacity: 0.9;
+  text-align: center;
+  font-size: 0;
+  box-sizing: border-box;
+}
+
+.footer-index {
+  margin-top: 80px;
+}
+
+.footer-col {
+  display: inline-block;
+  width: 33.33%;
+  vertical-align: middle;
+  box-sizing: border-box;
+  outline: 1px solid red;
+  font-size: 14px;
+}
+
+.footer-contacts {
+  font-size: 21px;
+  font-weight: bold;
+}
+
+/* Catalog */
+
+.catalog-search {
+  background: url("../img/catalog-background.jpg") no-repeat;
+  color: #ffffff;
+  padding: 20px 72px;
+  margin-bottom: 20px;
+}
+
+.search-type {
+  width: 13%;
+}
+
+section p {
+  font-weight: bold;
+}
+
+.catalog-filter {
+  padding: 20px 32px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid grey;
+}
+
+.catalog-filter ul {
+  list-style: none;
+  font-size: 0;
+}
+
+.catalog-filter li {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 18px;
+  margin-left: 20px;
+}
+
+.catalog-filter li:first-child {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  margin-left: 0;
+}
+
+.catalog-filter li:last-child {
+  margin-left: 550px;
+}
+
+.catalog-option {
+  border-bottom: 1px solid grey;
+  padding: 10px 72px;
+}
+
+
+.catalog-preview {
+  width: 12.8%;
+  outline: 1px solid red;
+}
+
+.catalog-item-wrap {
+  width: 20%;
+  outline: 1px solid red;
+  margin-left: 20px;
 }
