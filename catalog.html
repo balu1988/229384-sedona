@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -24,71 +25,74 @@
 
 
       <section class="catalog-search">
-        <form class="catalog-form clearfix" action="#" method="post">
+        <div class="wrapper-catalog">
+          <form class="catalog-form clearfix" action="#" method="get">
 
-          <div class="search-type to-left">
+            <div class="search-type to-left">
+              <p>Инфраструктура:</p>
 
-            <p>Инфраструктура:</p>
-            <div>
-              <input id="pool" type="checkbox" name="option" checked>
-              <label for="pool">Бассейн</label>
-            </div>
-            <div>
-              <input id="parking" type="checkbox" name="option">
-              <label for="parking">Парковка</label>
-            </div>
-            <div>
-              <input id="wifi" type="checkbox" name="option">
-              <label for="wifi">Wi-Fi</label>
+                <input id="pool" type="checkbox" name="option" checked>
+                <label for="pool">Бассейн</label>
+
+                <input id="parking" type="checkbox" name="option">
+                <label for="parking">Парковка</label>
+
+                <input id="wifi" type="checkbox" name="option">
+                <label for="wifi">Wi-Fi</label>
             </div>
 
-          </div>
 
-          <div class="search-type to-left">
+            <div class="search-type to-left">
+              <p>Тип жилья:</p>
 
-            <p>Тип жилья:</p>
-            <div>
-              <input id="hotel" type="checkbox" name="option" checked>
-              <label for="hotel">Гостиница</label>
-            </div>
-            <div>
-              <input id="motel" type="checkbox" name="option" checked>
-              <label for="motel">Мотель</label>
-            </div>
-            <div>
-              <input id="apartment" type="checkbox" name="option" checked>
-              <label for="apartment">Апартаменты</label>
+                <input id="hotel" type="checkbox" name="option" checked>
+                <label for="hotel">Гостиница</label>
+
+                <input id="motel" type="checkbox" name="option" checked>
+                <label for="motel">Мотель</label>
+
+                <input id="apartment" type="checkbox" name="option" checked>
+                <label for="apartment">Апартаменты</label>
+
             </div>
 
-          </div>
+            <div class="catalog-price to-right">
+               <!--Разберем в 6 разделе этот блок-->
+              <p>Стоимость в сутки (Р):</p>
+                От 0
+                До 3000
+              <div class="slider"><!--?--></div>
+              <button class="btn-search">Показать</button>
+            </div>
 
-          <div class="catalog-price to-right">
-             <!--Разберем в 6 разделе этот блок-->
-            <p>Стоимость в сутки (Р):</p>
-              От 0
-              До 3000
-            <div class="slider"><!--?--></div>
-            <button class="btn-search">Показать</button>
-          </div>
-
-         </form>
+           </form>
+         </div>
       </section>
 
-        <section class="search-results">
+      <section class="search-results">
 
-          <div class="catalog-filter">
-            <ul>
-              <li>Найдено 3:</li>
-              <li>Сортировка:</li>
-              <li><a href="#">По цене</a></li>
-              <li><a href="#">По типу</a></li>
-              <li><a href="#">По рейтингу</a></li>
-              <li class="sort-up-down"><a href="#">Стрелки</a></li>
-            </ul>
+        <div class="catalog-filter">
+          <div class="wrapper-catalog clearfix">
+            <div class="filter-options to-left">
+              <h2>Найдено 3:</h2>
+              <div class="filter-options-sort">
+                <h3>Сортировка:</h3>
+                <a class="active" href="#">По цене</a>
+                <a href="#">По типу</a>
+                <a href="#">По рейтингу</a>
+              </div>
+            </div>
+
+            <div class="sort-up-down to-right">
+                <a href="#"><i class="icon-up-dir"></i></a>
+                <a href="#"><i class="icon-down-dir"></i></a>
+            </div>
           </div>
+        </div>
 
                 <!--                          -->
-          <div class="catalog-option clearfix">
+        <div class="catalog-option">
+          <div class="wrapper-catalog clearfix">
             <div class="catalog-preview to-left">
               <a><img src="img/catalog-hotel1.jpg" width="135" height="90" alt="foto"></a>
             </div>
@@ -106,13 +110,20 @@
             </div>
 
             <div class="rating to-right">
-              <div class="stars"></div>
+              <div class="stars">
+                <i class="icon-star"></i>
+                <i class="icon-star"></i>
+                <i class="icon-star"></i>
+                <i class="icon-star"></i>
+              </div>
               <p class="rate">Рейтинг: 8,5</p>
             </div>
           </div>
+        </div>
 
-                <!--                          -->
-          <div class="catalog-option clearfix">
+              <!--                          -->
+        <div class="catalog-option">
+          <div class="wrapper-catalog clearfix">
             <div class="catalog-preview to-left">
               <a><img src="img/catalog-hotel2.jpg" width="135" height="90" alt="foto"></a>
             </div>
@@ -130,13 +141,18 @@
             </div>
 
             <div class="rating to-right">
-              <div class="stars"></div>
+              <div class="stars">
+                <i class="icon-star"></i>
+                <i class="icon-star"></i>
+              </div>
               <p class="rate">Рейтинг: 8,9</p>
             </div>
           </div>
+        </div>
 
-                <!--                          -->
-          <div class="catalog-option clearfix">
+              <!--                          -->
+        <div class="catalog-option">
+          <div class="wrapper-catalog clearfix">
             <div class="catalog-preview to-left">
               <a><img src="img/catalog-hotel3.jpg" width="135" height="90" alt="foto"></a>
             </div>
@@ -144,8 +160,8 @@
             <div class="catalog-item-wrap to-left">
               <h3>Villas at Poco Diablo</h3>
               <div class="info-text">
-                <p class="info-type">Апартаменты</p>
-                <p class="info-price">От 4000 р.</p>
+                <p class="info-text-type">Апартаменты</p>
+                <p class="info-text-price">От 4000 р.</p>
               </div>
               <div class="info-btns">
                 <a class="info-link info-link-blue" href="#">Подробнее</a>
@@ -154,12 +170,17 @@
             </div>
 
             <div class="rating to-right">
-              <div class="stars"></div>
+              <div class="stars">
+                <i class="icon-star"></i>
+                <i class="icon-star"></i>
+                <i class="icon-star"></i>
+              </div>
               <p class="rate">Рейтинг: 9,2</p>
             </div>
           </div>
+        </div>
 
-        </section>
+      </section>
 
 
       <footer class="footer">
@@ -167,13 +188,13 @@
           #VISITSEDONA
         </div>
         <div class="footer-col footer-social">
-          <a class="social-btn social-btn-tw" href="#">Twitter</a>
-          <a class="social-btn social-btn-fb" href="#">Facebook</a>
-          <a class="social-btn social-btn-yt" href="#">Youtube</a>
+          <a class="social-btn" href="#"><i class="icon icon-twitter"></i></a>
+          <a class="social-btn" href="#"><i class="icon icon-facebook"></i></a>
+          <a class="social-btn" href="#"><i class="icon icon-youtube"></i></a>
         </div>
         <div class="footer-col footer-copyright">
           <p>Website by</p>
-          <a class="copyright-link" href="https://htmlacademy.ru"><img src="img/academy-logo.png" width="113" height="39" alt="html academy logo"></a>
+          <a class="copyright-link" href="https://htmlacademy.ru"></a>
         </div>
       </footer>
 
