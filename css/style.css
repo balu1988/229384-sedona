@@ -256,17 +256,33 @@ h1, h2 {
   box-sizing: border-box;
 }
 
-.btn-submit {
-  background: #81b3d2;
-  width: 80%;
-  padding: 20px 60px;
+.index-search-form input {
+  background-color: #f2f2f2;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: inherit;
+  font-weight: bold;
+  color: #000000;
+  text-transform: inherit;
+  padding: 6px 10px;
 }
 
-.btn-submit:hover {
+.index-search-form input:hover {
+  background-color: #ebebeb;
+}
+
+
+.index-search-form .btn-submit {
+  background: #81b3d2;
+  width: 100%;
+  padding: 20px 60px;
+  color: #ffffff;
+}
+
+.index-search-form .btn-submit:hover {
   background: #669ec0;
 }
 
-.btn-submit:active {
+.index-search-form .btn-submit:active {
   background: #669ec0;
   color: rgba(255,255,255,0.3)
 }
@@ -502,7 +518,7 @@ input[type="checkbox"]:checked:disabled {
   color: #81b3d2;
 }
 
-/* каталог*/
+/* варианты */
 .catalog-option {
   border-bottom: 1px solid grey;
   padding: 30px 0;
