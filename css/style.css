@@ -60,7 +60,6 @@ body {
   clear: both;
 }
 
-
 .wrapper {
   width: 1200px;
   margin: 0 auto;
@@ -78,6 +77,11 @@ a {
 
 .to-right {
   float: right;
+}
+
+img {
+  max-width:100%;
+  height: auto;
 }
 
 .img-block {
@@ -162,7 +166,7 @@ h1, h2 {
 }
 
 .main-navigation a:active {
-  color: #766357;
+  color: rgba(0,0,0,0.3);
 }
 
 .main-navigation li:nth-child(2) {
@@ -176,6 +180,18 @@ h1, h2 {
 .main-navigation ul {
   padding: 0;
   font-size: 0;
+}
+
+.main-navigation .active-page {
+  color: #766357;
+}
+
+.main-navigation .active-page:hover {
+  color: #604e43;
+}
+
+.main-navigation .active-page:active {
+  color: rgba(118,99,87,0.3);
 }
 
 .reasons-title-main {
@@ -502,6 +518,12 @@ input[type="checkbox"]:checked:disabled {
   border-bottom: none;
 }
 
+.filter-options-sort .active-bc {
+  color: #81b3d2;
+  border-bottom: none;
+  opacity: 1;
+}
+
 .sort-up-down {
   vertical-align: middle;
   position: absolute;
@@ -524,6 +546,10 @@ input[type="checkbox"]:checked:disabled {
 }
 
 .sort-up-down a:active {
+  color: #81b3d2;
+}
+
+.sort-up-down .active-sort {
   color: #81b3d2;
 }
 
@@ -591,6 +617,11 @@ input[type="checkbox"]:checked:disabled {
   background-color: #669ec0;
 }
 
+.info-link-blue:active {
+  background-color: #669ec0;
+  color: rgba(255,255,255,0.3);
+}
+
 .info-link-brown {
   background-color: #766357;
 }
@@ -601,7 +632,7 @@ input[type="checkbox"]:checked:disabled {
 
 .info-link-brown:active {
   background-color: #503e33;
-  color: rgba(255,255,255,0.3)
+  color: rgba(255,255,255,0.3);
 }
 
 .rating {
