@@ -29,40 +29,52 @@
           <form class="catalog-form clearfix" action="#" method="get">
 
             <div class="search-type to-left">
-              <p>Инфраструктура:</p>
-
+              <div class="search-type-title">Инфраструктура:</div>
+              <div class="search-type-option">
                 <input id="pool" type="checkbox" name="option" checked>
                 <label for="pool">Бассейн</label>
-
+              </div>
+              <div class="search-type-option">
                 <input id="parking" type="checkbox" name="option">
                 <label for="parking">Парковка</label>
-
+              </div>
+              <div class="search-type-option">
                 <input id="wifi" type="checkbox" name="option">
                 <label for="wifi">Wi-Fi</label>
+              </div>
             </div>
 
 
             <div class="search-type to-left">
-              <p>Тип жилья:</p>
-
+              <div class="search-type-title">Тип жилья:</div>
+              <div class="search-type-option">
                 <input id="hotel" type="checkbox" name="option" checked>
                 <label for="hotel">Гостиница</label>
-
+              </div>
+              <div class="search-type-option">
                 <input id="motel" type="checkbox" name="option" checked>
                 <label for="motel">Мотель</label>
-
+              </div>
+              <div class="search-type-option">
                 <input id="apartment" type="checkbox" name="option" checked>
                 <label for="apartment">Апартаменты</label>
-
+              </div>
             </div>
 
-            <div class="catalog-price to-right">
-               <!--Разберем в 6 разделе этот блок-->
-              <p>Стоимость в сутки (Р):</p>
-                От 0
-                До 3000
-              <div class="slider"><!--?--></div>
-              <button class="btn-search">Показать</button>
+            <div class="filter-range to-right">
+              <div class="filter-range-title">Стоимость в сутки (р):</div>
+              <div class="price-controls">
+                <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+                <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+              </div>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="range-toggle range-toggle-min"></div>
+                <div class="range-toggle range-toggle-max"></div>
+              </div>
+              <button class="btn-transparent" type="submit">Показать</button>
             </div>
 
            </form>

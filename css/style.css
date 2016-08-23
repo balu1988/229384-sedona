@@ -88,7 +88,7 @@ img {
   display: block;
 }
 
-/* Index */
+/* Index.html */
 
 .main-header a {
   font-weight: bold;
@@ -244,6 +244,17 @@ h1, h2 {
   text-align: center;
 }
 
+.index-find h2 {
+  padding-top: 30px;
+  padding-bottom: 10px;
+  line-height: 24px;
+}
+
+.index-find p {
+  line-height: 24px;
+  padding-bottom: 40px;
+}
+
 .btn {
   color: #ffffff;
   font-size: 21px;
@@ -261,7 +272,7 @@ h1, h2 {
 
 .map-container {
   position: relative;
-  min-height: 430px;
+  min-height: 530px;
 }
 
 .index-form {
@@ -272,6 +283,32 @@ h1, h2 {
   padding: 50px;
   box-sizing: border-box;
   box-shadow: 0px 7px 15px 0px rgba(0, 1, 1, 0.15);
+  font-weight: bold;
+}
+
+.index-form label {
+  margin-right: 15px;
+}
+
+.form-arrive-date,
+.form-leave-date,
+.form-people {
+  padding-bottom: 30px;
+}
+
+.form-people {
+  font-size: 0;
+}
+
+.form-people div {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.form-people div:first-child {
+  margin-right: 50px;
 }
 
 .index-search-form input {
@@ -288,6 +325,13 @@ h1, h2 {
   background-color: #ebebeb;
 }
 
+#arrive, #leave {
+  width: 280px;
+}
+
+#child, #adult {
+  width: 80px;
+}
 
 .index-search-form .btn-submit {
   background: #81b3d2;
@@ -396,7 +440,7 @@ h1, h2 {
   background-position: -5px -103px;
 }
 
-/* Catalog */
+/* Catalog.html */
 
 .wrapper-catalog {
   width: 1056px;
@@ -409,14 +453,23 @@ h1, h2 {
 .catalog-search {
   background: #7f9ebd url("../img/catalog-background.jpg") no-repeat;
   color: #ffffff;
+  padding: 30px 0;
 }
 
 .search-type {
-  width: 13%;
+  min-width: 13%;
 }
 
-section p {
-  font-weight: bold;
+.search-type:first-child {
+  margin-right: 110px;
+}
+
+.search-type-option {
+  padding: 5px 0;
+}
+
+.search-type-option:last-child {
+  padding-bottom: 0;
 }
 
 input[type="checkbox"] {
@@ -459,7 +512,6 @@ input[type="checkbox"]:checked:disabled {
 /* фильтр */
 
 .catalog-filter {
-
   border-bottom: 1px solid grey;
 }
 
@@ -481,6 +533,7 @@ input[type="checkbox"]:checked:disabled {
 .filter-options-sort a,
 .sort-up-down a {
   display: inline-block;
+  vertical-align: middle;
 }
 
 .filter-options h2 {
@@ -651,5 +704,141 @@ input[type="checkbox"]:checked:disabled {
   padding: 5px 15px;
 }
 
+/*Фильтр с ползунками в каталоге из демо*/
 
+.filter-range {
+  width: 330px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.filter-range-title,
+.search-type-title {
+  margin-bottom: 9px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.price-controls {
+  position: relative;
+
+  height: 36px;
+  margin-bottom: 20px;
+
+  font-size: 0;
+
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.range-controls {
+  position: relative;
+
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-transparent:hover {
+  color: #000000;
+
+  background: #ffffff;
+}
 
