@@ -112,19 +112,23 @@ h1, h2 {
   background-position: top;
 }
 
+.index-welcome-screen::after {
+  content: "";
+  width: 1200px;
+  height: 57px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background: url("../img/background-mask.png");
+}
+
 .background-welcome {
   position: absolute;
   z-index: 1;
   top: 75px;
   left: 50%;
   transform: translateX(-50%);
-}
-
-.background-mask {
-  position: absolute;
-  z-index: 1;
-  bottom: 0;
-  left: 0;
 }
 
 .map-container {
@@ -197,7 +201,7 @@ h1, h2 {
 .reasons-title-main {
   text-align: center;
   margin: 50px auto;
-  width: 45%;
+  width: 576px;
   font-size: 14px;
 }
 
@@ -234,8 +238,46 @@ h1, h2 {
   font-size: 14px;
 }
 
-.reason-icon img {
-  margin: 0 auto;
+.reason-icon {
+  position: relative;
+  padding-top: 150px;
+  padding-bottom: 60px;
+}
+
+.housing::before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  background: url("../img/small-house-logo.png");
+  width: 75px;
+  height: 72px;
+}
+
+.food::before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  background: url("../img/small-food-logo.png");
+  width: 74px;
+  height: 70px;
+}
+
+.gift::before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  background: url("../img/small-gift-logo.png");
+  width: 64px;
+  height: 76px;
 }
 
 .index-find {
@@ -512,7 +554,7 @@ input[type="checkbox"]:checked:disabled {
 /* фильтр */
 
 .catalog-filter {
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
 }
 
 .catalog-filter a {
@@ -608,8 +650,9 @@ input[type="checkbox"]:checked:disabled {
 
 /* варианты */
 .catalog-option {
-  border-bottom: 1px solid grey;
-  padding: 30px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
 
 .catalog-preview {
