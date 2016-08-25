@@ -340,10 +340,15 @@ h1, h2 {
   margin-right: 15px;
 }
 
+input[name="adult"] {
+  margin-left: 18px;
+}
+
 .form-arrive-date,
 .form-leave-date,
 .form-people {
   margin-bottom: 30px;
+  position: relative;
 }
 
 .form-people {
@@ -358,17 +363,13 @@ h1, h2 {
   line-height: 26px;
 }
 
-.form-people div:first-child {
-  margin-right: 50px;
-}
-
 .index-search-form input {
   background-color: #f2f2f2;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: inherit;
   font-weight: bold;
   text-transform: inherit;
-  padding: 7px 10px;
+  padding: 7px 15px;
   border: none;
 }
 
@@ -382,48 +383,109 @@ h1, h2 {
 }
 
 .index-search-form input[name="arrive"] {
-  width: 300px;
+  width: 295px;
   padding-right: 40px;
 }
 
 .index-search-form input[name="leave"] {
-  width: 300px;
+  width: 295px;
   padding-right: 40px;
 }
 
 .index-search-form input[name="child"],
 .index-search-form input[name="adult"] {
-  width: 25px;
+  width: 50px;
   text-align: center;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
-.form-arrive-date label {
+.form-arrive-date label,
+.form-leave-date label,
+.adult-check,
+.child-check {
   position: relative;
   padding-top: 7px;
 }
 
-.form-leave-date label {
-  position: relative;
-  padding-top: 7px;
-}
-
-.form-arrive-date label::after,
-.form-leave-date label::after {
-  content: "\e800";
+.icon-cal {
   position: absolute;
-  left: 415px;
   font-size: 21px;
   line-height: 26px;
-  width: 40px;
-  height: 40px;
-  font-family: "symbols-sedona";
-  text-align: center;
+  border: none;
+  right: 0;
+  top: 7px;
   color: #c2c2c2;
-  font-weight: normal;
+  background-color: transparent;
+  cursor: pointer;
 }
 
-.form-arrive-date label::after:hover {
+.icon-cal:hover {
   color: #000000;
+}
+
+.icon-cal:active {
+  color: #81b3d2;
+}
+
+.icon-cal:focus {
+  outline: none;
+}
+
+.icon-pl,
+.icon-min {
+  position: absolute;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: normal;
+  border: none;
+  color: #c2c2c2;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.adult-check .icon-pl {
+  left: 184px;
+  top: 14px;
+}
+
+.adult-check .icon-min {
+  left: 114px;
+  top: 14px;
+}
+
+.child-check .icon-pl {
+  left: 135px;
+  top: 14px;
+}
+
+.child-check .icon-min {
+  left: 61px;
+  top: 14px;
+}
+
+.icon-pl:hover {
+  color: #000000;
+}
+
+.icon-pl:active {
+  color: #81b3d2;
+}
+
+.icon-pl:focus {
+  outline: none;
+}
+
+.icon-min:hover {
+  color: #000000;
+}
+
+.icon-min:active {
+  color: #81b3d2;
+}
+
+.icon-min:focus {
+  outline: none;
 }
 
 .index-search-form .btn-submit {
@@ -444,27 +506,15 @@ h1, h2 {
   color: rgba(255,255,255,0.3)
 }
 
-/* Пробовал как в видео про кастомизацию чекбоксов через икон шрифт
-
-.lololo {
-  position: relative;
+input::-webkit-input-placeholder {
+  color: #000000;
+  opacity: 1;
 }
 
-.btn-minus-span::after {
-  content: "\e800";
-  position: absolute;
-  left: 415px;
-  font-size: 21px;
-  line-height: 26px;
-  width: 40px;
-  height: 40px;
-  font-family: "symbols-sedona";
-  text-align: center;
-  color: #c2c2c2;
-  font-weight: normal;
-  background: #f2f2f2;
+input::-moz-placeholder {
+  color: #000000;
+  opacity: 1;
 }
-*/
 
 /*Футер*/
 

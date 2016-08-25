@@ -96,7 +96,7 @@
         <div class="index-find">
           <h2>Заинтересовались?</h2>
           <p>Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <a class="btn btn-find" href="">Поиск гостиницы в Седоне</a>
+          <button class="btn btn-find" type="button" href="">Поиск гостиницы в Седоне</button>
         </div>
 
 
@@ -106,27 +106,29 @@
             <form class="index-search-form" action="#" method="post">
               <div class="form-arrive-date clearfix">
                 <label class="to-left" for="arrive">Дата заезда:</label>
-                <input class="to-right" id="arrive" type="text" placeholder="24 апреля 2014" name="arrive">
+                <input class="to-right" id="arrive" type="text" placeholder="24 апреля 2016" name="arrive">
+                <button class="icon-cal" type="button"><i class="icon-calendar"></i></button>
               </div>
               <div class="form-leave-date clearfix">
                 <label class="to-left" for="leave">Дата выезда:</label>
-                <input class="to-right" id="leave" type="text" placeholder="4 июля 2014" name="leave">
+                <input class="to-right" id="leave" type="text" placeholder="4 июля 2016" name="leave">
+                <button class="icon-cal" type="button"><i class="icon-calendar"></i></button>
               </div>
               <div class="form-people clearfix">
-                <div class="to-left">
+                <div class="adult-check to-left">
                   <label for="adult">Взрослые:</label>
-                  <input class="btn-minus" type="button" value="-">
+                  <button class="icon-min" type="button"><i class="icon-minus"></i></button>
                   <input id="adult" type="text" placeholder="2" name="adult">
-                  <input class="btn-plus" type="button" value="+">
+                  <button class="icon-pl" type="button"><i class="icon-plus"></i></button>
                 </div>
-                <div class="to-right">
+                <div class="child-check to-right">
                   <label class="child" for="child">Дети:</label>
-                  <input class="btn-minus" type="button" value="-">
+                  <button class="icon-min" type="button"><i class="icon-minus"></i></button>
                   <input id="child" type="text" placeholder="0" name="child">
-                  <input class="btn-plus" type="button" value="+">
+                  <button class="icon-pl" type="button"><i class="icon-plus"></i></button>
                 </div>
               </div>
-              <input class="btn btn-submit" type="submit" value="Найти" name="submit">
+              <button class="btn btn-submit" type="submit">Найти</button>
             </form>
           </div>
 
