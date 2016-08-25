@@ -93,6 +93,7 @@ img {
 .main-header a {
   font-weight: bold;
   color: #000000;
+  vertical-align: middle;
 }
 
 h1, h2 {
@@ -557,7 +558,7 @@ input::-moz-placeholder {
   text-align: center;
 }
 
-.social-btn:nth-child(3) {
+.social-btn:nth-child(3n) {
   margin-right: 0;
 }
 
