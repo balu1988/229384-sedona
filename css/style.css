@@ -281,7 +281,7 @@ h1, h2 {
 }
 
 .index-find {
-  width: 43.8%;
+  width: 568px;
   margin: 0 auto;
   text-align: center;
 }
@@ -306,26 +306,34 @@ h1, h2 {
 }
 
 .btn-find {
-  padding: 30px 60px;
+  padding: 30px 135px;
   background: #766357;
-  width: 77.38%;
+  width: 568px;
   display: block;
+  font-size: 21px;
+  line-height: 26px;
+  box-sizing: border-box;
 }
 
 .map-container {
   position: relative;
-  min-height: 530px;
+  min-height: 550px;
 }
 
+/*Индекс форма поиск гостиниц*/
+
 .index-form {
-  width: 44%;
+  width: 568px;
   min-height: 14%;
   background: #ffffff;
   margin: 0 auto;
-  padding: 50px;
+  padding: 55px;
   box-sizing: border-box;
   box-shadow: 0px 7px 15px 0px rgba(0, 1, 1, 0.15);
+  font-size: 14px;
+  line-height: 26px;
   font-weight: bold;
+  box-sizing: border-box;
 }
 
 .index-form label {
@@ -335,11 +343,12 @@ h1, h2 {
 .form-arrive-date,
 .form-leave-date,
 .form-people {
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .form-people {
   font-size: 0;
+  margin-bottom: 50px;
 }
 
 .form-people div {
@@ -358,21 +367,63 @@ h1, h2 {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: inherit;
   font-weight: bold;
-  color: #000000;
   text-transform: inherit;
-  padding: 6px 10px;
+  padding: 7px 10px;
+  border: none;
 }
 
 .index-search-form input:hover {
   background-color: #ebebeb;
 }
 
-#arrive, #leave {
-  width: 280px;
+.index-search-form input:focus {
+  outline: 2px solid #e5e5e5;
+  background-color: #ffffff;
 }
 
-#child, #adult {
-  width: 80px;
+.index-search-form input[name="arrive"] {
+  width: 300px;
+  padding-right: 40px;
+}
+
+.index-search-form input[name="leave"] {
+  width: 300px;
+  padding-right: 40px;
+}
+
+.index-search-form input[name="child"],
+.index-search-form input[name="adult"] {
+  width: 25px;
+  text-align: center;
+}
+
+.form-arrive-date label {
+  position: relative;
+  padding-top: 7px;
+}
+
+.form-leave-date label {
+  position: relative;
+  padding-top: 7px;
+}
+
+.form-arrive-date label::after,
+.form-leave-date label::after {
+  content: "\e800";
+  position: absolute;
+  left: 415px;
+  font-size: 21px;
+  line-height: 26px;
+  width: 40px;
+  height: 40px;
+  font-family: "symbols-sedona";
+  text-align: center;
+  color: #c2c2c2;
+  font-weight: normal;
+}
+
+.form-arrive-date label::after:hover {
+  color: #000000;
 }
 
 .index-search-form .btn-submit {
@@ -380,6 +431,8 @@ h1, h2 {
   width: 100%;
   padding: 20px 60px;
   color: #ffffff;
+  font-size: 21px;
+  line-height: 26px;
 }
 
 .index-search-form .btn-submit:hover {
@@ -390,6 +443,30 @@ h1, h2 {
   background: #669ec0;
   color: rgba(255,255,255,0.3)
 }
+
+/* Пробовал как в видео про кастомизацию чекбоксов через икон шрифт
+
+.lololo {
+  position: relative;
+}
+
+.btn-minus-span::after {
+  content: "\e800";
+  position: absolute;
+  left: 415px;
+  font-size: 21px;
+  line-height: 26px;
+  width: 40px;
+  height: 40px;
+  font-family: "symbols-sedona";
+  text-align: center;
+  color: #c2c2c2;
+  font-weight: normal;
+  background: #f2f2f2;
+}
+*/
+
+/*Футер*/
 
 .footer {
   background-color: rgba(255, 255, 255, 0.9);
@@ -691,10 +768,11 @@ input[type="checkbox"]:checked:disabled {
   font-size: 14px;
   margin-top: 5px;
   margin-bottom: 10px;
+  width: 110px;
 }
 
 .info-text-type {
-  margin-right: 45px;
+  margin-right: 10px;
 }
 
 .info-link {

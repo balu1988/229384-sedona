@@ -104,25 +104,29 @@
 
            <div class="index-form">
             <form class="index-search-form" action="#" method="post">
-              <div class="form-arrive-date">
-                <label for="arrive">Дата заезда:</label>
-                <input id="arrive" type="text" placeholder="24 апреля 2014">
+              <div class="form-arrive-date clearfix">
+                <label class="to-left" for="arrive">Дата заезда:</label>
+                <input class="to-right" id="arrive" type="text" placeholder="24 апреля 2014" name="arrive">
               </div>
-              <div class="form-leave-date">
-                <label for="leave">Дата выезда:</label>
-                <input id="leave" type="text" placeholder="4 июля 2014">
+              <div class="form-leave-date clearfix">
+                <label class="to-left" for="leave">Дата выезда:</label>
+                <input class="to-right" id="leave" type="text" placeholder="4 июля 2014" name="leave">
               </div>
-              <div class="form-people">
-                <div>
+              <div class="form-people clearfix">
+                <div class="to-left">
                   <label for="adult">Взрослые:</label>
-                  <input id="adult" type="text" placeholder="2">
+                  <input class="btn-minus" type="button" value="-">
+                  <input id="adult" type="text" placeholder="2" name="adult">
+                  <input class="btn-plus" type="button" value="+">
                 </div>
-                <div>
-                  <label for="child">Дети:</label>
-                  <input id="child" type="text" placeholder="0">
+                <div class="to-right">
+                  <label class="child" for="child">Дети:</label>
+                  <input class="btn-minus" type="button" value="-">
+                  <input id="child" type="text" placeholder="0" name="child">
+                  <input class="btn-plus" type="button" value="+">
                 </div>
               </div>
-              <input class="btn btn-submit" type="submit" value="Найти">
+              <input class="btn btn-submit" type="submit" value="Найти" name="submit">
             </form>
           </div>
 
