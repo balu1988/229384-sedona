@@ -316,6 +316,10 @@ h1, h2 {
   box-sizing: border-box;
 }
 
+.btn-find:focus {
+  outline: none;
+}
+
 .map-container {
   position: relative;
   min-height: 550px;
@@ -335,6 +339,10 @@ h1, h2 {
   line-height: 26px;
   font-weight: bold;
   box-sizing: border-box;
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 316px;
 }
 
 .index-form label {
@@ -515,6 +523,34 @@ input::-webkit-input-placeholder {
 input::-moz-placeholder {
   color: #000000;
   opacity: 1;
+}
+
+/*Анимация для формы*/
+@keyframes appear {
+    from {transform: translateX(-2000px);}
+    50%  {transform: translateX(-1000px);}
+    100% {transform: translateX(0px);}
+}
+
+.index-form-show {
+  display: block;
+  animation: appear 0.3s;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
+.modal-error {
+  animation: shake 0.5s;
 }
 
 /*Футер*/
