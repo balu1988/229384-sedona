@@ -88,16 +88,41 @@ img {
   display: block;
 }
 
+/* если не подгрузился js*/
+.no-js .index-form {
+  display: block;
+}
+
 /* Index.html */
+/*
+.main-header {
+  margin-bottom: 58px;
+}
+*/
 
 .main-header a {
   font-weight: bold;
   color: #000000;
   vertical-align: middle;
+  line-height: 26px;
 }
 
-h1, h2 {
+.reasons-title-main h1 {
   font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  margin-bottom: 28px;
+}
+
+.reasons-title-main p {
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 0.08px;
+}
+
+h2 {
+  font-size: 21px;
+  line-height: 21px;
   font-weight: bold;
 }
 
@@ -178,8 +203,13 @@ h1, h2 {
   margin-right: 20%;
 }
 
+.main-navigation li:nth-child(3) {
+  text-indent: 4px;
+}
+
 .main-navigation li:nth-child(4n) {
   margin-right: 0;
+  text-indent: 15px;
 }
 
 .main-navigation ul {
@@ -207,6 +237,7 @@ h1, h2 {
 }
 
 .reasons-block {
+  margin-top: 58px;
   font-size: 0;
 }
 .reasons-row {
@@ -228,7 +259,7 @@ h1, h2 {
   display: inline-block;
   vertical-align: top;
   font-size: 14px;
-  padding: 40px 48px;
+  padding: 38px 48px;
   text-align: center;
 }
 
@@ -314,6 +345,11 @@ h1, h2 {
   font-size: 21px;
   line-height: 26px;
   box-sizing: border-box;
+  cursor: pointer;
+}
+
+.btn-find:hover {
+  background: #604e43;
 }
 
 .btn-find:focus {
@@ -504,6 +540,7 @@ input[name="adult"] {
   color: #ffffff;
   font-size: 21px;
   line-height: 26px;
+  cursor: pointer;
 }
 
 .index-search-form .btn-submit:hover {
@@ -512,7 +549,12 @@ input[name="adult"] {
 
 .index-search-form .btn-submit:active {
   background: #669ec0;
-  color: rgba(255,255,255,0.3)
+  color: rgba(255,255,255,0.3);
+  outline: none;
+}
+
+.index-search-form .btn-submit:focus {
+  outline: none;
 }
 
 input::-webkit-input-placeholder {
@@ -532,7 +574,7 @@ input::-moz-placeholder {
     100% {transform: translateX(0px);}
 }
 
-.index-form-show {
+.js-form-show {
   display: block;
   animation: appear 0.3s;
 }
@@ -549,7 +591,7 @@ input::-moz-placeholder {
   }
 }
 
-.modal-error {
+.js-modal-error {
   animation: shake 0.5s;
 }
 
@@ -706,11 +748,11 @@ input[type="checkbox"]:checked + label::before {
   content: "\2611";
 }
 
-input[type="checkbox"]:disabled {
+input[type="checkbox"]:disabled + label::before {
   color: #6a6a6a;
 }
 
-input[type="checkbox"]:checked:disabled {
+input[type="checkbox"]:checked:disabled + label::before {
   color: #6a6a6a;
 }
 
@@ -718,7 +760,7 @@ input[type="checkbox"]:checked:disabled {
 /* фильтр */
 
 .catalog-filter {
-  border-bottom: 1px solid rgba(0,0,0,0.3);
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .catalog-filter a {
@@ -814,7 +856,7 @@ input[type="checkbox"]:checked:disabled {
 
 /* варианты */
 .catalog-option {
-  border-bottom: 1px solid rgba(0,0,0,0.3);
+  border-bottom: 1px solid #e5e5e5;
   padding-top: 30px;
   padding-bottom: 10px;
 }
