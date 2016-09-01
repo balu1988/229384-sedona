@@ -740,7 +740,8 @@ input::-moz-placeholder {
 .catalog-search {
   background: #7f9ebd url("../img/catalog-background.jpg") no-repeat;
   color: #ffffff;
-  padding: 30px 0;
+  padding-top: 27px;
+  padding-bottom: 25px;
 }
 
 .search-type {
@@ -748,7 +749,7 @@ input::-moz-placeholder {
 }
 
 .search-type:first-child {
-  margin-right: 110px;
+  margin-right: 117px;
 }
 
 .search-type-option {
@@ -765,9 +766,9 @@ input[type="checkbox"] {
 
 input[type="checkbox"] + label {
   display: block;
-  margin: 10px 0;
+  margin: 7px 0;
   line-height: 21px;
-  padding-left: 45px;
+  padding-left: 40px;
   position: relative;
   cursor: pointer;
 }
@@ -799,6 +800,7 @@ input[type="checkbox"]:checked:disabled + label::before {
 /* фильтр */
 
 .catalog-filter {
+  padding: 13px 0;
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -896,18 +898,19 @@ input[type="checkbox"]:checked:disabled + label::before {
 /* варианты */
 .catalog-option {
   border-bottom: 1px solid #e5e5e5;
-  padding-top: 30px;
-  padding-bottom: 10px;
+  padding-top: 24px;
+  padding-bottom: 19px;
 }
 
 .catalog-preview {
+  padding-top: 5px;
   width: 135px;
 }
 
 .catalog-item-wrap {
   width: 280px;
   height: 90px;
-  margin-left: 20px;
+  margin-left: 30px;
   box-sizing: border-box;
 }
 
@@ -935,19 +938,19 @@ input[type="checkbox"]:checked:disabled + label::before {
   vertical-align: top;
   font-size: 14px;
   margin-top: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 19px;
   width: 110px;
 }
 
 .info-text-type {
-  margin-right: 10px;
+  margin-right: 6px;
 }
 
 .info-link {
   font-size: 14px;
   line-height: 21px;
   color: #ffffff;
-  padding: 8px 17px;
+  padding: 4px 17px;
 }
 
 .info-link-blue {
@@ -978,11 +981,14 @@ input[type="checkbox"]:checked:disabled + label::before {
 }
 
 .rating {
-  width: 120px;
+  width: 140px;
+
   text-align: right;
 }
 
 .stars {
+  font-size: 19px;
+  letter-spacing: -13px;
   color: #81b3d2;
   margin-bottom: 45px;
 }
@@ -990,30 +996,36 @@ input[type="checkbox"]:checked:disabled + label::before {
 .rate {
   background-color: #f2f2f2;
   color: #666666;
-  padding: 5px 15px;
+  padding: 3px 15px;
+  margin-left: 27px;
 }
 
 /*Фильтр с ползунками в каталоге из демо*/
 
 .filter-range {
-  width: 330px;
+  width: 328px;
   color: #ffffff;
   text-transform: uppercase;
 }
 
+
 .filter-range-title,
 .search-type-title {
-  margin-bottom: 9px;
+  margin-bottom: 14px;
 
   font-weight: 600;
   font-size: 16px;
   line-height: 21px;
 }
 
+.filter-range-title {
+  margin-bottom: 10px;
+}
+
 .price-controls {
   position: relative;
-
-  height: 36px;
+  margin-left: 10px;
+  height: 32px;
   margin-bottom: 20px;
 
   font-size: 0;
@@ -1039,16 +1051,20 @@ input[type="checkbox"]:checked:disabled + label::before {
   display: inline-block;
 
   font-size: 14px;
-  line-height: 38px;
+  line-height: 28px;
   vertical-align: top;
 
   cursor: pointer;
 }
 
-.price-controls .min-price,
-.price-controls .max-price {
+.price-controls .min-price {
   width: 90px;
   padding-left: 65px;
+}
+
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 57px;
 }
 
 .price-controls input {
@@ -1065,6 +1081,7 @@ input[type="checkbox"]:checked:disabled + label::before {
 
 .range-controls {
   position: relative;
+  margin-left: 10px;
 
   margin-bottom: 32px;
 }
