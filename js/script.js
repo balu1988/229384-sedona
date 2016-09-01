@@ -1,11 +1,12 @@
+var jsfree = document.querySelector(".no-js");
+jsfree.classList.remove("no-js");
+
 var bfind = document.querySelector(".btn-find");
 var popup = document.querySelector(".index-form");
 var arrive = popup.querySelector(".js-arrive");
 var form = popup.querySelector(".index-search-form");
 var leave = popup.querySelector(".js-leave");
-var jsfree = document.querySelector(".no-js");
 
-jsfree.classList.remove("no-js");
 
 bfind.addEventListener("click", function(event) {
   event.preventDefault();
@@ -30,3 +31,24 @@ window.addEventListener("keydown", function(event) {
   }
 });
 
+function initMap() {
+        var myLatLng = {lat: 34.8757014, lng: -111.7599078};
+
+        // Create a map object and specify the DOM element for display.
+        var map = new google.maps.Map(document.querySelector(".js-map"), {
+          center: myLatLng,
+          scrollwheel: false,
+          streetViewControl: false,
+          zoom: 9,
+          zoomControlOptions: {
+            position: google.maps.ControlPosition.RIGHT_CENTER
+            },
+        });
+
+        // Create a marker and set its position.
+        var marker = new google.maps.Marker({
+          map: map,
+          position: myLatLng,
+          title: "Welcome to Sedona"
+        });
+      }
