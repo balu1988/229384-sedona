@@ -149,7 +149,8 @@ h2 {
   z-index: 1;
   top: 75px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .map-container {
@@ -176,7 +177,8 @@ h2 {
   z-index: 1;
   left: 50%;
   top: 0;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .main-navigation a {
@@ -297,7 +299,8 @@ h2 {
   position: absolute;
   top: 60px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   z-index: 1;
   background: url("../img/small-house-logo.png");
   width: 75px;
@@ -309,7 +312,8 @@ h2 {
   position: absolute;
   top: 60px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   z-index: 1;
   background: url("../img/small-food-logo.png");
   width: 74px;
@@ -321,7 +325,8 @@ h2 {
   position: absolute;
   top: 56px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   z-index: 1;
   background: url("../img/small-gift-logo.png");
   width: 64px;
@@ -602,31 +607,57 @@ input::-moz-placeholder {
 
 /*Анимация для формы*/
 
+@-webkit-keyframes appear {
+    from {-webkit-transform: translateX(-2000px);transform: translateX(-2000px);}
+    50%  {-webkit-transform: translateX(-1000px);transform: translateX(-1000px);}
+    100% {-webkit-transform: translateX(0px);transform: translateX(0px);}
+}
+
 @keyframes appear {
-    from {transform: translateX(-2000px);}
-    50%  {transform: translateX(-1000px);}
-    100% {transform: translateX(0px);}
+    from {-webkit-transform: translateX(-2000px);transform: translateX(-2000px);}
+    50%  {-webkit-transform: translateX(-1000px);transform: translateX(-1000px);}
+    100% {-webkit-transform: translateX(0px);transform: translateX(0px);}
 }
 
 .js-form-show {
   display: block;
-  animation: appear 0.5s;
+  -webkit-animation: appear 0.5s;
+          animation: appear 0.5s;
+}
+
+@-webkit-keyframes shake {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
 }
 
 @keyframes shake {
   0%, 100% {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   10%, 30%, 50%, 70%, 90% {
-    transform: translateX(-10px);
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
   }
   20%, 40%, 60%, 80% {
-    transform: translateX(10px);
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
   }
 }
 
 .js-modal-error {
-  animation: shake 0.5s;
+  -webkit-animation: shake 0.5s;
+          animation: shake 0.5s;
 }
 
 /*Футер*/
@@ -871,7 +902,8 @@ input[type="checkbox"]:checked:disabled + label::before {
   position: absolute;
   right: 0;
   top: 12px;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .sort-up-down a {
@@ -1044,7 +1076,8 @@ input[type="checkbox"]:checked:disabled + label::before {
   height: 22px;
 
   background: #ffffff;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .price-controls label {
@@ -1147,4 +1180,3 @@ input[type="checkbox"]:checked:disabled + label::before {
 
   background: #ffffff;
 }
-
