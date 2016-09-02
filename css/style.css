@@ -418,12 +418,12 @@ h2 {
 .map-container {
   position: relative;
 
-  min-height: 593px;
+  min-height: 597px;
 }
 
 .js-map {
   width: 1200px;
-  height: 593px;
+  min-height: 597px;
 }
 
 /*Индекс форма поиск гостиниц*/
@@ -494,6 +494,7 @@ input[name="adult"] {
 
 .index-search-form input {
   padding: 6px 15px;
+  height: 26px;
 
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: inherit;
@@ -720,7 +721,7 @@ input::-moz-placeholder {
 /*Футер*/
 
 .footer {
-  height: 120px;
+  min-height: 120px;
   padding-top: 35px;
   padding-bottom: 40px;
   box-sizing: border-box;
@@ -1021,7 +1022,7 @@ input[type="checkbox"]:checked:disabled + label::before {
 
 .catalog-item-wrap {
   width: 280px;
-  height: 90px;
+  min-height: 90px;
   margin-left: 30px;
   box-sizing: border-box;
 }
@@ -1050,7 +1051,7 @@ input[type="checkbox"]:checked:disabled + label::before {
 
   margin-top: 5px;
   margin-bottom: 19px;
-  width: 110px;
+  min-width: 110px;
   vertical-align: top;
 
   font-size: 14px;
@@ -1147,7 +1148,7 @@ input[type="checkbox"]:checked:disabled + label::before {
 .price-controls {
   position: relative;
   margin-left: 10px;
-  height: 32px;
+  min-height: 32px;
   margin-bottom: 20px;
 
   font-size: 0;
